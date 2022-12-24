@@ -120,7 +120,7 @@ namespace MvcCodeFlowClientManual.Controllers
 
         private ActionResult C2QB()
         {
-            scope = OidcScopes.Accounting.GetStringValue() + " " + OidcScopes.Payment.GetStringValue();
+            scope = OidcScopes.Accounting.GetStringValue();
             authorizeUrl = GetAuthorizeUrl(scope);
             // perform the redirect here.
             return Redirect(authorizeUrl);
